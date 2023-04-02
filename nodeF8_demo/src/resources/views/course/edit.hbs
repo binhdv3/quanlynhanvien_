@@ -1,0 +1,25 @@
+<div class="mt-4">
+    <h1>Edit</h1>
+    {{!-- install method overried chuyển post sang put để update --}}
+    <form method="POST" action="/course/{{course._id}}?_method=PUT">
+        <div class="form-group">
+            <label for="name">Tên</label>
+            <input type="text" class="form-control" value="{{course.name}}" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="description">Mô tảc</label>
+            <textarea type="text" class="form-control" id="description"
+                name="description">{{course.description}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="salary">Lương</label>
+            <input type="text" class="form-control" id="salary"
+                name="salary" value="{{course.salary}}">
+        </div>
+        <div class="form-group">
+            <label for="image">Ảnh</label>
+            <input type="text" class="form-control" value="{{course.image}}" id="image" name="image">
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
